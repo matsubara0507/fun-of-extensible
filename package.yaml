@@ -34,9 +34,26 @@ default-extensions:
 dependencies:
 - base >= 4.7 && < 5
 - extensible >= 0.4.9
+- bytestring
+- microlens
+- text
+- transformers
+- yaml
 
 library:
   source-dirs: src
+
+executables:
+  sample-app:
+    main:                Main.hs
+    source-dirs:         app/sample
+    dependencies:
+    - fun-of-extensible
+  pconfig:
+    main:                Main.hs
+    source-dirs:         app/pconfig
+    dependencies:
+    - fun-of-extensible
 
 tests:
   fun-of-extensible-test:
