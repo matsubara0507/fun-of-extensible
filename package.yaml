@@ -1,0 +1,49 @@
+name:                fun-of-extensible
+version:             0.1.0.0
+homepage:            https://github.com/matsubara0507/fun-of-extensible#readme
+license:             MIT
+author:              MATSUBARA Nobutada
+maintainer:          t12307043@gunma-u.ac.jp
+copyright:           MATSUBARA Nobutada
+category:            Web
+description:         Please see the README on GitHub at <https://github.com/matsubara0507/fun-of-extensible#readme>
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+
+default-extensions:
+- ConstraintKinds
+- FlexibleContexts
+- FlexibleInstances
+- GeneralizedNewtypeDeriving
+- OverloadedStrings
+- PolyKinds
+- RankNTypes
+- StandaloneDeriving
+- TypeFamilies
+- TypeSynonymInstances
+
+dependencies:
+- base >= 4.7 && < 5
+- extensible >= 0.4.9
+
+library:
+  source-dirs: src
+
+tests:
+  fun-of-extensible-test:
+    main: Driver.hs
+    source-dirs: test
+    dependencies:
+    - fun-of-extensible
+    - tasty
+    - tasty-hspec
+    other-modules: []

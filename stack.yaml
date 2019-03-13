@@ -1,0 +1,5 @@
+resolver: lts-13.12
+packages:
+- .
+extra-deps:
+- extensible-0.5
